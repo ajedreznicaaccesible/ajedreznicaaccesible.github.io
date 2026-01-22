@@ -1,0 +1,92 @@
+/* =========================================
+   ESTILOS COMPLETOS - AJEDREZ NICA ACCESIBLE
+   ========================================= */
+
+body {
+    background-color: #001f3f; 
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003366; 
+    padding: 20px;
+    border-bottom: 3px solid #d4af37;
+}
+
+.contenedor-header {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 150px;              
+    height: auto;              
+    border: 2px solid #ffffff; 
+    border-radius: 5px;
+}
+
+nav {
+    background-color: #001a35;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #ffd700; 
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #001a35;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid #d4af37;
+    margin-top: 50px;
+}
+
+.lista-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.lista-redes a {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ffd700;
+    text-decoration: none;
+}
+
+.lista-redes a:hover {
+    background-color: #ffd700;
+    color: #001f3f;
+}
