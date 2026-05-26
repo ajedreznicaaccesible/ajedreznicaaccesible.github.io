@@ -83,7 +83,7 @@
 
         <section>
             <h2>Sitios y programas accesibles</h2>
-            <p>Compartimos en este espacio los enlaces, descargas y descripciones de las plataformas, lectores de pantalla y softwares adaptados que utilizamos para estudiar, entrenar y jugar al ajedrez de forma completamente accesible:</p>
+            <p>Compartimos en este espacio los enlaces, descargas and descripciones de las plataformas, lectores de pantalla y softwares adaptados que utilizamos para estudiar, entrenar y jugar al ajedrez de forma completamente accesible:</p>
             <ul>
                 <li>
                     <a href="https://lichess.org" target="_blank">Plataforma oficial de Lichess.org para jugar online. Pulsa Enter para abrir.</a>
@@ -137,6 +137,38 @@
                     <a href="https://drive.google.com/uc?id=1M4ZYBwv-MRHpyOfT2WIrDZoS0wQwprVQ&export=download" target="_blank">Complemento fenReader para NVDA (lector de posiciones en código FEN). Pulsa Enter para descargar automáticamente.</a>
                 </li>
             </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Buzón de Comentarios y Sugerencias</h2>
+            <p>Dejanos tus comentarios, dudas o sugerencias para seguir mejorando el ajedrez accesible en Nicaragua. Tu mensaje llegará directamente al administrador del sitio.</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" style="max-width: 500px; margin: 20px 0;">
+                <input type="hidden" name="access_key" value="e270cf46-3b8d-4757-8f8a-5e29f845d3db">
+                <input type="hidden" name="subject" value="Nuevo comentario en Ajedrez Nica Accesible">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <p>
+                    <label for="nombre"><strong>Nombre completo:</strong></label><br>
+                    <input type="text" id="nombre" name="name" required style="width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc;">
+                </p>
+
+                <p>
+                    <label for="correo"><strong>Correo electrónico:</strong></label><br>
+                    <input type="email" id="correo" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc;">
+                </p>
+
+                <p>
+                    <label for="mensaje"><strong>Tu comentario o mensaje:</strong></label><br>
+                    <textarea id="mensaje" name="message" rows="5" required style="width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc; font-family: inherit;"></textarea>
+                </p>
+
+                <p>
+                    <button type="submit" style="padding: 10px 20px; background-color: #0056b3; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Enviar comentario</button>
+                </p>
+            </form>
         </section>
     </main>
 
