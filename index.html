@@ -1,9 +1,9 @@
-                                                            <!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajedrez Nica Accesible - Inicio</title>                                                                            
+    <title>Ajedrez Nica Accesible - Inicio</title>
     <link rel="stylesheet" href="Estilos.css">
 </head>
 <body>
@@ -139,6 +139,27 @@
 
     <footer>
         <hr>
+        
+        <section style="text-align: center; margin: 20px 0;">
+            <div id="visitas" role="status" aria-live="polite">
+                Cargando contador de visitas...
+            </div>
+        </section>
+
+        <script>
+            window.addEventListener('load', function() {
+                const MI_URL_APPS_SCRIPT = 'https://script.google.com/macros/s/AKfycbx5086eNfogOgGBMpSZIupaRdxdAXu9ZYR6yZEGLY-buEi8gnTiZG1IJkMD-MuxxSe8Pw/exec';
+                fetch(MI_URL_APPS_SCRIPT, { mode: 'no-cors' })
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('visitas').innerText = "Visitantes: " + data;
+                    })
+                    .catch(error => {
+                        document.getElementById('visitas').innerText = "Contador en mantenimiento";
+                    });
+            });
+        </script>
+
         <p><strong>Nuestras Redes Sociales:</strong></p>
         <div class="lista-redes">
             <p><a href="https://www.facebook.com/profile.php?id=61571140864017" target="_blank">Facebook de Ajedrez Nica Accesible.</a></p>
@@ -152,4 +173,4 @@
     </footer>
 
 </body>
-</html>                        
+</html>
