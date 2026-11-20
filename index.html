@@ -76,6 +76,8 @@
                 <li><a href="https://stockfishchess.org/download/" target="_blank">Descarga del motor de análisis Stockfish. Pulsa Enter para abrir.</a></li>
                 <li><a href="https://lczero.org/play/download/" target="_blank">Descarga del motor de redes neuronales Leela Chess Zero (LCZero). Pulsa Enter para abrir.</a></li>
                 <li><a href="https://www.pgnmentor.com/files.html" target="_blank">Descarga de archivos de partidas en PGN Mentor. Pulsa Enter para abrir.</a></li>
+                <li><a href="https://theweekinchess.com/" target="_blank">The Week in Chess (TWIC) — noticias, partidas diarias y descargas semanales en PGN y ChessBase. Pulsa Enter para abrir.</a></li>
+                <li><a href="https://www.cs.kent.ac.uk/people/staff/djb/pgn-extract/" target="_blank">pgn-extract (versión 26-04) — herramienta de línea de comandos para buscar, filtrar, detectar duplicados y formatear partidas PGN. Pulsa Enter para abrir.</a></li>
                 <li><a href="https://drive.google.com/uc?id=1seftjYpfrUijkKS8EjB_MmbtcNMf7inj&export=download" target="_blank">Programa SK Chess para Windows (reproductor de PGN). Pulsa Enter para descargar automáticamente.</a></li>
                 <li><a href="https://drive.google.com/uc?id=1JPZuhn9R9fkDbaA2dpg-eeoGkzNo-vwU&export=download" target="_blank">Diccionario en español para SK Chess. Les recomendamos ver el video explicativo en nuestro canal de YouTube para saber cómo aplicarlo. Pulsa Enter para descargar automáticamente.</a></li>
                 <li><a href="https://drive.google.com/uc?id=1oQ5c3t6pkioETxAWqPyAdjQ7roL3rJXz&export=download" target="_blank">Programa WinBoard para Windows para reproducir archivos PGN. Pulsa Enter para descargar automáticamente.</a></li>
@@ -148,13 +150,18 @@
 
         <script>
             window.addEventListener('load', function() {
-                const MI_URL_APPS_SCRIPT = 'https://script.google.com/macros/s/AKfycbykyb2AJl7VgQg30BpIvo9rF1RnkITUqka3kxuSs4jHHkxRriVYZMAmKhjC9HKRVStewQ/exec';
-                fetch(MI_URL_APPS_SCRIPT, { mode: 'no-cors' })
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('visitas').innerText = "Visitantes: " + data;
+                const MI_URL_APPS_SCRIPT = 'https://script.google.com/macros/s/AKfycbz4183Oc_xz3dC65RUgy_NvZ9aurdzny17QUKasHtcf1tt5MOHZMWtUQMwOAu3asZly/exec';
+                fetch(MI_URL_APPS_SCRIPT)
+                    .then(function(response) {
+                        if (!response.ok) {
+                            throw new Error('Error HTTP ' + response.status);
+                        }
+                        return response.text();
                     })
-                    .catch(error => {
+                    .then(function(data) {
+                        document.getElementById('visitas').innerText = "Visitantes: " + data.trim();
+                    })
+                    .catch(function() {
                         document.getElementById('visitas').innerText = "Contador en mantenimiento";
                     });
             });
@@ -169,8 +176,8 @@
         </div>
         <br>
         <p>Desarrollado por: Jairo Oswaldo Leyton Calderón</p>
-        <p>&copy; 2026 Ajedrez Nica Accesible</p>
+        <p>© 2026 Ajedrez Nica Accesible</p>
     </footer>
 
 </body>
-</html>                
+</html>
